@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiUIMobileProject">
         <activity
+            android:name=".Harita"
+            android:exported="false" />
+        <activity
             android:name=".kiloBoyInput"
             android:exported="true">
             <intent-filter>
