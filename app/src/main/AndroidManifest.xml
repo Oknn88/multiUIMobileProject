@@ -10,15 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiUIMobileProject">
         <activity
-<<<<<<< Updated upstream
-=======
             android:name=".NotActivity"
-            android:exported="false"/>
-      <activity      
+            android:exported="false"/>    
+        <activity      
             android:name=".Harita"
             android:exported="false"/>
         <activity
->>>>>>> Stashed changes
             android:name=".kiloBoyInput"
             android:exported="true">
             <intent-filter>
