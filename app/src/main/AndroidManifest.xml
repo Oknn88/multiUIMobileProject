@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiUIMobileProject">
         <activity
-            android:name=".NotActivity"
-            android:exported="false"/>    
-        <activity      
-            android:name=".Harita"
-            android:exported="false"/>
+            android:name=".KiloBoyActivity"
+            android:exported="false" />
         <activity
-            android:name=".kiloBoyInput"
+            android:name=".NotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HaritaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
