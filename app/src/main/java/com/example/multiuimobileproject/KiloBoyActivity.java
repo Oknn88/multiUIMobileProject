@@ -2,28 +2,79 @@ package com.example.multiuimobileproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.multiuimobileproject.Entities.DBHandler;
+import com.example.multiuimobileproject.Entities.kiloBoy;
 
 import java.util.Calendar;
 
 public class KiloBoyActivity extends AppCompatActivity {
 
+
+
+
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
+    private static final int DATABASE_VERSION = 2;
+    private DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kilo_boy);
 
+
+
+        Button btnKaydet = (Button)findViewById(R.id.btnKaydet);
+        EditText boyValue = (EditText) findViewById(R.id.editTextBoy);
+        EditText kiloValue = (EditText) findViewById(R.id.editTextKilo);
+
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
         dateButton.setText(getTodaysDate());
+
+        dbHandler = new DBHandler(KiloBoyActivity.this);
+
+        btnKaydet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                kiloBoy kb = new kiloBoy();
+                kb.boy = boyValue.getText().toString();
+                kb.kilo = kiloValue.getText().toString();
+                kb.tarih = dateButton.getText().toString();
+
+                if (kb.boy.isEmpty() && kb.kilo.isEmpty() && kb.tarih.isEmpty()) {
+                    Toast.makeText(KiloBoyActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // on below line we are calling a method to add new
+                // course to sqlite data and pass all our values to it.
+                dbHandler.addNewEntry(kb.boy, kb.kilo, kb.tarih);
+
+                // after adding the data we are displaying a toast message.
+                Toast.makeText(KiloBoyActivity.this, "Kilo Boy bilgisi kaydedildi", Toast.LENGTH_SHORT).show();
+                boyValue.setText("Boy");
+                kiloValue.setText("Kilo");
+                dateButton.setText(getTodaysDate());
+
+
+
+            }
+        });
+
     }
+
+
 
     private String getTodaysDate() {
         Calendar cal = Calendar.getInstance();
@@ -70,42 +121,40 @@ public class KiloBoyActivity extends AppCompatActivity {
 
     }
 
-    //    private String makeDateString(int day, int month, int year)
-//        {
-//            return getMonthFormat (month) + " " + day + " " + year;
-//        }
-//        private String getMonthFormat (int month)
-//        {
-//            if (month == 1)
-//                return "JAN";
-//            if (month == 2)
-//                return "FEB";
-//            if (month == 3)
-//                return "MAR";
-//            if (month == 4)
-//                return "APR";
-//            if (month == 5)
-//                return "MAY";
-//            if (month ==6)
-//                return "JUN";
-//            if (month == 7)
-//                return "JULY";
-//            if (month== 8)
-//                return "AUG";
-//            if (month == 9)
-//                return "SEP";
-//            if (month==10)
-//                return "OCT";
-//            if (month ==11)
-//                return "NOV";
-//            if (month ==12)
-//                return "DEC";
-//
-//            return "JAN";
-//        }
     public void openDatePicker (View view)
     {
         datePickerDialog.show();
     }
+
+//    public void dbInsert(kiloBoy kb){
+//
+//        try {
+//            SQLiteDatabase database = this.openOrCreateDatabase("KiloBoyDB",MODE_PRIVATE,null);
+//            database.execSQL("CREATE TABLE IF NOT EXISTS KiloBoyDB (kilo INT, boy INT,tarih VARCHAR)");
+//            database.execSQL("INSERT INTO KiloBoyDB (kilo, boy, tarih) VALUES (kb.kilo,kb.boy,'kb.tarih')");
+//
+//            Toast.makeText(getApplicationContext(),"Kayit Edildi",Toast.LENGTH_LONG).show();
+//
+//            Cursor cursor = database. rawQuery( "SELECT * FROM KiloBoyDB",null);
+//            int kiloIx = cursor.getColumnIndex("kilo");
+//            int boyIx = cursor.getColumnIndex("boy");
+//            int tarihIx = cursor.getColumnIndex("tarih");
+//
+//            while (cursor.moveToNext()) {
+//                System.out.println("Boy" + cursor.getInt(kiloIx));
+//                System.out.println("Kilo" + cursor.getInt(boyIx));
+//                System.out.println("Tarih" + cursor.getString(tarihIx));
+//            }
+//            cursor.close();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+//    public Date tarihDonustur(String tarih)throws Exception{
+//        Date date=new SimpleDateFormat("yyyy.MM.dd").parse(tarih);
+//        return date;
+//    }
 
 }
