@@ -1,6 +1,5 @@
 package com.example.multiuimobileproject;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -11,7 +10,7 @@ import android.widget.DatePicker;
 
 import java.util.Calendar;
 
-public class kiloBoyInput extends AppCompatActivity {
+public class KiloBoyActivity extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
@@ -19,7 +18,8 @@ public class kiloBoyInput extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.input_kiloboy);
+        setContentView(R.layout.activity_kilo_boy);
+
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
         dateButton.setText(getTodaysDate());
@@ -70,7 +70,7 @@ public class kiloBoyInput extends AppCompatActivity {
 
     }
 
-//    private String makeDateString(int day, int month, int year)
+    //    private String makeDateString(int day, int month, int year)
 //        {
 //            return getMonthFormat (month) + " " + day + " " + year;
 //        }
@@ -103,8 +103,9 @@ public class kiloBoyInput extends AppCompatActivity {
 //
 //            return "JAN";
 //        }
-        public void openDatePicker (View view)
-        {
-            datePickerDialog.show();
-        }
+    public void openDatePicker (View view)
+    {
+        datePickerDialog.show();
+    }
+
 }
