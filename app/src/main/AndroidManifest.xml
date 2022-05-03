@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.multiuimobileproject">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiUIMobileProject">
-
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -28,18 +29,23 @@
             android:value="AIzaSyAQTqsbIQ8NajU9Z3-MWg982NfbJYlbIqs" />
 
         <activity
-            android:name=".MapsActivity"
-            android:exported="true"
-            android:label="@string/title_activity_maps">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".NotActivity"
+            android:exported="false">
         </activity>
         <activity
-            android:name=".kiloBoyInput"
+            android:name=".listKiloBoyActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".KiloBoyActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
