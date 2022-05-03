@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,6 @@ public class KiloBoyActivity extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
-    private static final int DATABASE_VERSION = 2;
     private DBHandler dbHandler;
 
     @Override
@@ -34,6 +34,7 @@ public class KiloBoyActivity extends AppCompatActivity {
 
 
         Button btnKaydet = (Button)findViewById(R.id.btnKaydet);
+        Button btnListele = (Button)findViewById(R.id.btnListele);
         EditText boyValue = (EditText) findViewById(R.id.editTextBoy);
         EditText kiloValue = (EditText) findViewById(R.id.editTextKilo);
 
@@ -66,12 +67,16 @@ public class KiloBoyActivity extends AppCompatActivity {
                 boyValue.setText("Boy");
                 kiloValue.setText("Kilo");
                 dateButton.setText(getTodaysDate());
-
-
-
             }
         });
 
+        btnListele.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),listKiloBoyActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
 
