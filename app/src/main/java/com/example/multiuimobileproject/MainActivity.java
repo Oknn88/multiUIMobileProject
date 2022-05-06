@@ -20,22 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
+        
         Intent i = new Intent(getApplicationContext(),KiloBoyActivity.class);
         startActivity(i);
 
-         */
 
-        Button ikincisayfayagec=(Button)findViewById(R.id.ikincisayfagecis);
-
-        ikincisayfayagec.setOnClickListener(new View.OnClickListener() //mainden notgoster sayfasına gecis
-        {
-            @Override
-            public void onClick(View view) {
-                Intent ikincisayfagecis=new Intent(MainActivity.this, NotgosterActivity.class);
-                startActivity(ikincisayfagecis);
-            }
-        });
     }
 
 
