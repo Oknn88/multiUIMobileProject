@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.multiuimobileproject">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>//izin icin eklendi
 
     <application
@@ -10,6 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiUIMobileProject">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAQTqsbIQ8NajU9Z3-MWg982NfbJYlbIqs" />
+
+        <activity
+            android:name=".listKiloBoyActivity"
+            android:exported="false" />
         <activity
             android:name=".NotgosterActivity"
             android:exported="false" />
@@ -20,7 +32,7 @@
             android:name=".KiloBoyActivity"
             android:exported="false" />
         <activity
-            android:name=".HaritaActivity"
+            android:name=".MapsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
