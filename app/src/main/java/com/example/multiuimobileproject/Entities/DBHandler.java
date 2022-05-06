@@ -2,8 +2,14 @@ package com.example.multiuimobileproject.Entities;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper {
 
@@ -77,6 +83,52 @@ public class DBHandler extends SQLiteOpenHelper {
         // at last we are closing our
         // database after adding database.
         db.close();
+    }
+    public ArrayList<kiloBoy> getAllItems(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        long count = DatabaseUtils.queryNumEntries(db, TABLE_NAME);
+
+        ArrayList<kiloBoy> kb = new ArrayList<kiloBoy>();
+
+        Cursor cursor;
+
+        try
+        {
+            // ask the database object to create the cursor.
+            cursor = db.query(
+                    TABLE_NAME,
+                    new String[]{ID_COL, KILO_COL, BOY_COL,TARIH_COL},
+                    null, null, null, null, null
+            );
+
+            // move the cursors pointer to position zero.
+            cursor.moveToFirst();
+
+            // if there is data after the current cursor position, add it
+            // to the ArrayList.
+            if (!cursor.isAfterLast())
+            {
+                do
+                {
+                    kiloBoy data = new kiloBoy();
+
+                    data.kilo = (cursor.getString(1));
+                    data.boy = (cursor.getString(2));
+                    data.tarih = (cursor.getString(3));
+
+                    kb.add(data);
+                }
+                // move the cursor's pointer up one position.
+                while (cursor.moveToNext());
+            }
+        }
+        catch (SQLException e)
+        {
+            Log.e("DB Error", e.toString());
+            e.printStackTrace();
+        }
+
+        return kb;
     }
 
     @Override
