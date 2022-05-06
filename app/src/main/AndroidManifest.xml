@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.multiuimobileproject">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>//izin icin eklendi
 
     <application
         android:allowBackup="true"
@@ -10,10 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiUIMobileProject">
         <activity
-            android:name=".KiloBoyActivity"
+            android:name=".NotgosterActivity"
             android:exported="false" />
         <activity
-            android:name=".NotActivity"
+            android:name=".NotalActivity"
+            android:exported="false" />
+
+
+
+
+
+        <activity
+            android:name=".KiloBoyActivity"
             android:exported="false" />
         <activity
             android:name=".HaritaActivity"
