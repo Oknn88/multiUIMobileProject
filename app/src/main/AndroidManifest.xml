@@ -16,11 +16,6 @@
         <activity
             android:name=".NotalActivity"
             android:exported="false" />
-
-
-
-
-
         <activity
             android:name=".KiloBoyActivity"
             android:exported="false" />
