@@ -28,5 +28,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"/>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,11 @@ import android.widget.Toast;
 import com.example.multiuimobileproject.Entities.DBHandler;
 import com.example.multiuimobileproject.Entities.kiloBoy;
 import com.example.multiuimobileproject.databinding.ActivityKiloBoyBinding;
+<<<<<<< Updated upstream
 import com.example.multiuimobileproject.databinding.ActivityMapsBinding;
+=======
+import com.example.multiuimobileproject.databinding.ActivityMainBinding;
+>>>>>>> Stashed changes
 
 import java.util.Calendar;
 
@@ -33,6 +37,7 @@ public class KiloBoyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< Updated upstream
         binding = ActivityKiloBoyBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -61,7 +66,31 @@ public class KiloBoyActivity extends AppCompatActivity {
             return true;
         });
 
+=======
+        setContentView(R.layout.activity_kilo_boy);
+        binding = ActivityKiloBoyBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+>>>>>>> Stashed changes
 
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()){
+
+                case R.id.not:
+                    replaceActivity(new NotgosterActivity());
+                    break;
+                case R.id.harita:
+                    replaceActivity(new MapsActivity());
+                    break;
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+
+            }
+
+
+            return true;
+        });
 
 
         Button btnKaydet = (Button)findViewById(R.id.btnKaydet);
@@ -193,9 +222,15 @@ public class KiloBoyActivity extends AppCompatActivity {
 //        return date;
 //    }
 
+<<<<<<< Updated upstream
 
     private void replaceActivity(Activity activity){
         Intent intent = new Intent(this, activity.getClass());
+=======
+    private void replaceActivity(Activity activity){
+
+        Intent intent = new Intent(this,activity.getClass());
+>>>>>>> Stashed changes
         startActivity(intent);
         this.finish();
     }
