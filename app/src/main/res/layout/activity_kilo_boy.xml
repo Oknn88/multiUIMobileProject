@@ -102,6 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"/>
 
+<<<<<<< Updated upstream
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -113,5 +114,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"/>
 
+=======
+>>>>>>> Stashed changes
 
 </androidx.constraintlayout.widget.ConstraintLayout>

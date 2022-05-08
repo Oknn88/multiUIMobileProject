@@ -29,7 +29,10 @@
         app:menu="@menu/bottom_nav_menu"/>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

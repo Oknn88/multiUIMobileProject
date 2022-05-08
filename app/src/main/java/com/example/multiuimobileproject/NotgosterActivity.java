@@ -32,7 +32,11 @@ public class NotgosterActivity extends AppCompatActivity {
         setContentView(view);
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         binding.bottomNavigationView.setSelectedItemId(R.id.not);
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -48,12 +52,18 @@ public class NotgosterActivity extends AppCompatActivity {
                     replaceActivity(new MapsActivity());
                     break;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 case R.id.kiloboy:
                     replaceActivity(new KiloBoyActivity());
                     break;
                 case R.id.sakamatik:
                     replaceActivity(new JokeActivity());
                     break;
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
 =======
                 case R.id.kilo:
                     replaceActivity(new KiloBoyActivity());
@@ -68,7 +78,10 @@ public class NotgosterActivity extends AppCompatActivity {
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         notsArrayList = new ArrayList<>();
@@ -132,9 +145,15 @@ public class NotgosterActivity extends AppCompatActivity {
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
     private void replaceActivity(Activity activity){
         Intent intent = new Intent(this, activity.getClass());
+=======
+    private void replaceActivity(Activity activity){
+
+        Intent intent = new Intent(this,activity.getClass());
+>>>>>>> Stashed changes
 =======
     private void replaceActivity(Activity activity){
 

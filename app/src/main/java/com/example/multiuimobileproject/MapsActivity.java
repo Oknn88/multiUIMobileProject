@@ -22,7 +22,11 @@ import android.view.View;
 import android.widget.Toast;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import com.example.multiuimobileproject.databinding.ActivityNotgosterBinding;
+=======
+import com.example.multiuimobileproject.databinding.ActivityMainBinding;
+>>>>>>> Stashed changes
 =======
 import com.example.multiuimobileproject.databinding.ActivityMainBinding;
 >>>>>>> Stashed changes
@@ -54,8 +58,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(binding.getRoot());
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         binding.bottomNavigationView.setSelectedItemId(R.id.harita);
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -69,12 +76,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     replaceActivity(new MapsActivity());
                     break;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 case R.id.kiloboy:
                     replaceActivity(new KiloBoyActivity());
                     break;
                 case R.id.sakamatik:
                     replaceActivity(new JokeActivity());
                     break;
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
 =======
                 case R.id.kilo:
                     replaceActivity(new KiloBoyActivity());
@@ -88,6 +101,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 =======
 
 
@@ -192,6 +210,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
         this.finish();
     }
+<<<<<<< Updated upstream
 
 
     private void replaceActivity(Activity activity){
@@ -199,5 +218,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
         this.finish();
     }
+=======
+>>>>>>> Stashed changes
 
 }
