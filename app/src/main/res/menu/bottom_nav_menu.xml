@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Not"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:id="@+id/not"/>
+    <item android:title="Harita"
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:id="@+id/harita"/>
+    <item android:title="Kilo-Boy"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:id="@+id/kiloboy"/>
+    <item android:title="Şakamatik"
+        android:icon="@drawable/ic_baseline_mood_24"
+        android:id="@+id/sakamatik"/>
+</menu>

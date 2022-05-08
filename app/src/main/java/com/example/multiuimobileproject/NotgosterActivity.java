@@ -1,5 +1,6 @@
 package com.example.multiuimobileproject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -29,6 +30,33 @@ public class NotgosterActivity extends AppCompatActivity {
         binding = ActivityNotgosterBinding.inflate(getLayoutInflater());
         View view =binding.getRoot();
         setContentView(view);
+
+        binding.bottomNavigationView.setSelectedItemId(R.id.not);
+
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()){
+
+                case R.id.not:
+                    replaceActivity(new NotgosterActivity());
+                    break;
+                case R.id.harita:
+                    replaceActivity(new MapsActivity());
+                    break;
+                case R.id.kiloboy:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+                case R.id.sakamatik:
+                    replaceActivity(new JokeActivity());
+                    break;
+
+            }
+
+
+            return true;
+        });
+
+
 
         notsArrayList = new ArrayList<>();
         binding.recylerView.setLayoutManager(new LinearLayoutManager(this));
@@ -89,4 +117,12 @@ public class NotgosterActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    private void replaceActivity(Activity activity){
+        Intent intent = new Intent(this, activity.getClass());
+        startActivity(intent);
+        this.finish();
+    }
+
 }
