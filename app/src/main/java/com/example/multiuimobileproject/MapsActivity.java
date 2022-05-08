@@ -9,7 +9,9 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -19,6 +21,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.multiuimobileproject.databinding.ActivityNotgosterBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -44,6 +47,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.bottomNavigationView.setSelectedItemId(R.id.harita);
+
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()){
+
+                case R.id.not:
+                    replaceActivity(new NotgosterActivity());
+                    break;
+                case R.id.harita:
+                    replaceActivity(new MapsActivity());
+                    break;
+                case R.id.kiloboy:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+                case R.id.sakamatik:
+                    replaceActivity(new JokeActivity());
+                    break;
+
+            }
+
+
+            return true;
+        });
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -139,5 +167,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
     }
 
+
+
+    private void replaceActivity(Activity activity){
+        Intent intent = new Intent(this, activity.getClass());
+        startActivity(intent);
+        this.finish();
+    }
 
 }
