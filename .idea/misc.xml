@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.3381795195954488" />
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -60,6 +61,10 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+        <entry key="..\:/Users/Okan/Documents/GitHub/multiUIMobileProject/app/src/main/res/layout/activity_maps.xml" value="0.1816123188405797" />
+        <entry key="..\:/Users/Okan/Documents/GitHub/multiUIMobileProject/app/src/main/res/layout/activity_maps2.xml" value="0.18645833333333334" />
+>>>>>>> parent of 922704b (Navbar added.)
         <entry key="..\:/Users/havak/Desktop/GitHub/multiUIMobileProject/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.205" />
         <entry key="..\:/Users/havak/Desktop/GitHub/multiUIMobileProject/app/src/main/res/layout/activity_main.xml" value="0.2128623188405797" />
         <entry key="..\:/Users/havak/Desktop/GitHub/multiUIMobileProject/app/src/main/res/layout/activity_notal.xml" value="0.2128623188405797" />

@@ -105,6 +105,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
+<<<<<<< HEAD
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -120,4 +121,6 @@
 =======
 >>>>>>> Stashed changes
 
+=======
+>>>>>>> parent of 922704b (Navbar added.)
 </androidx.constraintlayout.widget.ConstraintLayout>

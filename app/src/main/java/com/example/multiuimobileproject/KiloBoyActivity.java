@@ -3,7 +3,6 @@ package com.example.multiuimobileproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.multiuimobileproject.Entities.DBHandler;
 import com.example.multiuimobileproject.Entities.kiloBoy;
+<<<<<<< HEAD
 import com.example.multiuimobileproject.databinding.ActivityKiloBoyBinding;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -29,6 +29,8 @@ import com.example.multiuimobileproject.databinding.ActivityMainBinding;
 =======
 import com.example.multiuimobileproject.databinding.ActivityMainBinding;
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 922704b (Navbar added.)
 
 import java.util.Calendar;
 
@@ -40,11 +42,11 @@ public class KiloBoyActivity extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
     private DBHandler dbHandler;
-    private ActivityKiloBoyBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         binding = ActivityKiloBoyBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -81,6 +83,9 @@ public class KiloBoyActivity extends AppCompatActivity {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
+=======
+        setContentView(R.layout.activity_kilo_boy);
+>>>>>>> parent of 922704b (Navbar added.)
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
@@ -242,6 +247,7 @@ public class KiloBoyActivity extends AppCompatActivity {
 //        return date;
 //    }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -267,4 +273,6 @@ public class KiloBoyActivity extends AppCompatActivity {
         this.finish();
     }
 
+=======
+>>>>>>> parent of 922704b (Navbar added.)
 }

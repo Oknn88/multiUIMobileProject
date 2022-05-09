@@ -9,9 +9,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -21,6 +19,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -34,6 +33,8 @@ import com.example.multiuimobileproject.databinding.ActivityMainBinding;
 =======
 import com.example.multiuimobileproject.databinding.ActivityMainBinding;
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 922704b (Navbar added.)
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -61,6 +62,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -128,6 +130,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 922704b (Navbar added.)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -231,6 +235,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
+<<<<<<< HEAD
 
     private void replaceActivity(Activity activity){
         Intent intent = new Intent(this, activity.getClass());
@@ -242,4 +247,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 =======
 >>>>>>> Stashed changes
 
+=======
+>>>>>>> parent of 922704b (Navbar added.)
 }
