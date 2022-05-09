@@ -3,6 +3,7 @@
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <item android:title="Not"
         android:icon="@drawable/ic_baseline_event_note_24"
         android:id="@+id/not"/>
@@ -18,6 +19,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     <item
         android:icon="@drawable/ic_baseline_event_note_24"
         android:id="@+id/not"
@@ -31,6 +34,9 @@
         android:id="@+id/kilo"
         android:title="Kilo"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -103,6 +103,7 @@
         app:menu="@menu/bottom_nav_menu"/>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -114,6 +115,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"/>
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 

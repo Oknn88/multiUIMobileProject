@@ -18,7 +18,11 @@ import com.example.multiuimobileproject.Entities.kiloBoy;
 import com.example.multiuimobileproject.databinding.ActivityKiloBoyBinding;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import com.example.multiuimobileproject.databinding.ActivityMapsBinding;
+=======
+import com.example.multiuimobileproject.databinding.ActivityMainBinding;
+>>>>>>> Stashed changes
 =======
 import com.example.multiuimobileproject.databinding.ActivityMainBinding;
 >>>>>>> Stashed changes
@@ -75,10 +79,16 @@ public class KiloBoyActivity extends AppCompatActivity {
         binding = ActivityKiloBoyBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
+=======
+
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+>>>>>>> Stashed changes
 =======
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -234,9 +244,15 @@ public class KiloBoyActivity extends AppCompatActivity {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
     private void replaceActivity(Activity activity){
         Intent intent = new Intent(this, activity.getClass());
+=======
+    private void replaceActivity(Activity activity){
+
+        Intent intent = new Intent(this,activity.getClass());
+>>>>>>> Stashed changes
 =======
     private void replaceActivity(Activity activity){
 
