@@ -2,6 +2,7 @@ package com.example.multiuimobileproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Application;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.harita:
                     replaceActivity(new MapsActivity());
                     break;
-                case R.id.kilo:
+                case R.id.kiloboy:
                     replaceActivity(new KiloBoyActivity());
+                    break;
+                case R.id.sakamatik:
+                    replaceActivity(new JokeActivity());
                     break;
 
             }
