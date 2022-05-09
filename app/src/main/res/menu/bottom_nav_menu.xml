@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <item android:title="Not"
         android:icon="@drawable/ic_baseline_event_note_24"
         android:id="@+id/not"/>
@@ -13,4 +16,28 @@
     <item android:title="Şakamatik"
         android:icon="@drawable/ic_baseline_mood_24"
         android:id="@+id/sakamatik"/>
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+    <item
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:id="@+id/not"
+        android:title="Not"/>
+    <item
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:id="@+id/harita"
+        android:title="Harita"/>
+    <item
+        android:icon="@drawable/ic_baseline_person_24"
+        android:id="@+id/kilo"
+        android:title="Kilo"/>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 </menu>
