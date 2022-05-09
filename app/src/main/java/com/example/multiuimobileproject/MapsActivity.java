@@ -9,7 +9,9 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -19,6 +21,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+import com.example.multiuimobileproject.databinding.ActivityNotgosterBinding;
+=======
+import com.example.multiuimobileproject.databinding.ActivityMainBinding;
+>>>>>>> Stashed changes
+=======
+import com.example.multiuimobileproject.databinding.ActivityMainBinding;
+>>>>>>> Stashed changes
+=======
+import com.example.multiuimobileproject.databinding.ActivityMainBinding;
+>>>>>>> Stashed changes
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -42,9 +57,77 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_harita);
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+        binding.bottomNavigationView.setSelectedItemId(R.id.harita);
+
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()){
+
+                case R.id.not:
+                    replaceActivity(new NotgosterActivity());
+                    break;
+                case R.id.harita:
+                    replaceActivity(new MapsActivity());
+                    break;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+                case R.id.kiloboy:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+                case R.id.sakamatik:
+                    replaceActivity(new JokeActivity());
+                    break;
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
+
+            }
+
+
+            return true;
+        });
+
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
+=======
+
+
+>>>>>>> Stashed changes
+=======
+
+
+>>>>>>> Stashed changes
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -139,5 +222,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
     }
 
+    private void replaceActivity(Activity activity){
+
+        Intent intent = new Intent(this,activity.getClass());
+        startActivity(intent);
+        this.finish();
+    }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+
+
+    private void replaceActivity(Activity activity){
+        Intent intent = new Intent(this, activity.getClass());
+        startActivity(intent);
+        this.finish();
+    }
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 }

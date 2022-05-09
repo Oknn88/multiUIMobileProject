@@ -1,5 +1,6 @@
 package com.example.multiuimobileproject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -30,6 +31,72 @@ public class NotgosterActivity extends AppCompatActivity {
         View view =binding.getRoot();
         setContentView(view);
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+        binding.bottomNavigationView.setSelectedItemId(R.id.not);
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
+
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()){
+
+                case R.id.not:
+                    replaceActivity(new NotgosterActivity());
+                    break;
+                case R.id.harita:
+                    replaceActivity(new MapsActivity());
+                    break;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+                case R.id.kiloboy:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+                case R.id.sakamatik:
+                    replaceActivity(new JokeActivity());
+                    break;
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
+=======
+                case R.id.kilo:
+                    replaceActivity(new KiloBoyActivity());
+                    break;
+>>>>>>> Stashed changes
+
+            }
+
+
+            return true;
+        });
+
+
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         notsArrayList = new ArrayList<>();
         binding.recylerView.setLayoutManager(new LinearLayoutManager(this));
         notAdapter= new NotAdapter(notsArrayList);
@@ -89,4 +156,30 @@ public class NotgosterActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+
+    private void replaceActivity(Activity activity){
+        Intent intent = new Intent(this, activity.getClass());
+=======
+    private void replaceActivity(Activity activity){
+
+        Intent intent = new Intent(this,activity.getClass());
+>>>>>>> Stashed changes
+=======
+    private void replaceActivity(Activity activity){
+
+        Intent intent = new Intent(this,activity.getClass());
+>>>>>>> Stashed changes
+=======
+    private void replaceActivity(Activity activity){
+
+        Intent intent = new Intent(this,activity.getClass());
+>>>>>>> Stashed changes
+        startActivity(intent);
+        this.finish();
+    }
+
 }
